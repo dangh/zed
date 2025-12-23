@@ -60,6 +60,7 @@ pub struct EditorSettings {
     pub completion_menu_scrollbar: ShowScrollbar,
     pub completion_detail_alignment: CompletionDetailAlignment,
     pub diff_view_style: DiffViewStyle,
+    pub select_word_as_node: bool,
 }
 #[derive(Debug, Clone)]
 pub struct Jupyter {
@@ -291,6 +292,7 @@ impl Settings for EditorSettings {
             completion_menu_scrollbar: editor.completion_menu_scrollbar.map(Into::into).unwrap(),
             completion_detail_alignment: editor.completion_detail_alignment.unwrap(),
             diff_view_style: editor.diff_view_style.unwrap(),
+            select_word_as_node: editor.select_word_as_node.unwrap(),
         }
     }
 }

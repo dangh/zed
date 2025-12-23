@@ -226,6 +226,10 @@ pub struct EditorSettingsContent {
     ///
     /// Default: split
     pub diff_view_style: Option<DiffViewStyle>,
+    /// Whether to select the word under the cursor when expanding the selection.
+    ///
+    /// Default: true
+    pub select_word_as_node: Option<bool>,
 }
 
 #[derive(
